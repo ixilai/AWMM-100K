@@ -18,6 +18,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
@@ -54,7 +58,7 @@
         .links a {
             display: inline-block;
             padding: 10px 22px;
-            margin: 0 6px;
+            margin: 6px;
             background-color: var(--primary-color);
             color: #fff;
             text-decoration: none;
@@ -104,6 +108,42 @@
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
         }
 
+        .update-card {
+            background: #eef6ff;
+            border-left: 5px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 25px 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .update-card p {
+            margin: 0;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background-color: var(--primary-color);
+            color: #fff;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        ul.awmm-text-list {
+            color: var(--subtext-color);
+            font-size: 1.05em;
+            line-height: 1.8;
+            margin: 0 0 20px 20px;
+            padding: 0;
+        }
+
+        ul.awmm-text-list li {
+            margin-bottom: 8px;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.1em;
@@ -133,6 +173,9 @@
         <a href="https://pan.baidu.com/s/12bYsY3E15aG5skiQ3Tz9zQ?pwd=whv3" target="_blank">
             Download Dataset
         </a>
+        <a href="#awmm-text">
+            AWMM-Text Update
+        </a>
     </div>
 </header>
 
@@ -152,6 +195,51 @@
             light, medium, and heavy intensities. The dataset supports research on multimodal image fusion as well as
             image restoration tasks such as dehazing, deraining, and desnowing.
         </p>
+    </section>
+
+    <section id="awmm-text">
+        <h2>AWMM-Text Update</h2>
+
+        <div class="update-card">
+            <span class="tag">Updated on May 25, 2026</span>
+            <p>
+                We have updated the <strong>AWMM-Text</strong> annotations in <strong>AWMM-100K</strong>.
+                The updated AWMM-Text release provides richer and more reliable textual supervision for
+                adverse-weather multi-modality image fusion.
+            </p>
+        </div>
+
+        <p>
+            
+    <strong>AWMM-Text</strong> provides paired textual annotations for adverse-weather
+    multi-modality image pairs, including BLIP-generated global captions and
+    ChatGPT-4-generated detailed descriptions. The global captions summarize scene
+    semantics and degradation types, while the detailed descriptions provide fine-grained
+    cues about objects, regions, and infrared-visible differences.
+        </p>
+        
+        <p>
+    In total, AWMM-Text contains global and detailed textual descriptions for
+    <strong>8,500</strong> multi-modality image pairs, together with their corresponding
+    clean images. To ensure annotation quality, we manually screen the generated texts
+    and inspect approximately <strong>30%</strong> of them using clear pass/fail rules.
+    Problematic annotations are regenerated, minimally corrected, or discarded to avoid
+    introducing noisy supervision.
+        </p>
+
+        <ul class="awmm-text-list">
+            <li>
+                <strong>Global captions:</strong> summarize scene semantics and major adverse-weather degradation.
+            </li>
+            <li>
+                <strong>Detailed descriptions:</strong> provide fine-grained local guidance for degraded regions,
+                visible objects, and infrared-visible differences.
+            </li>
+            <li>
+                <strong>Quality control:</strong> combines manual screening, stratified sampling, regeneration,
+                manual correction, and final filtering.
+            </li>
+        </ul>
     </section>
 
     <section>
